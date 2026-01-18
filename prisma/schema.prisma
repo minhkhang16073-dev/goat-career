@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model SaveSlot {
+  id             String   @id @default(uuid())
+  name           String
+  worldStateJson String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
